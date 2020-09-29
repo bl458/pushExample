@@ -11,9 +11,9 @@ const App = () => {
   return (
     <>
       <StatusBar barStyle="default" />
-      <SafeAreaView style={{flex: 1, backgroundColor: 'green'}}>
+      <SafeAreaView style={{flex: 1, backgroundColor: 'purple'}}>
         <TouchableOpacity
-          style={{flex: 1, backgroundColor: 'purple'}}
+          style={{flex: 1}}
           onPress={pushHelper.localNotification}
         />
       </SafeAreaView>
