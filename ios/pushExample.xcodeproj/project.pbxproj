@@ -56,6 +56,7 @@
 		2D02E47B1E0B4A5D006451C7 /* pushExample-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pushExample-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* pushExample-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pushExample-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F8A995665AA9BDF88D2D02F /* libPods-pushExample-pushExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-pushExample-pushExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B60765E2522FB6200712490 /* pushExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = pushExample.entitlements; path = pushExample/pushExample.entitlements; sourceTree = "<group>"; };
 		42D6D8DEADD1F1815EDBF2C2 /* Pods-pushExample-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pushExample-tvOS.release.xcconfig"; path = "Target Support Files/Pods-pushExample-tvOS/Pods-pushExample-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		81375CFC20A494E3A28CBA4E /* libPods-pushExample-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-pushExample-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = pushExample/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -125,6 +126,7 @@
 		13B07FAE1A68108700A75B9A /* pushExample */ = {
 			isa = PBXGroup;
 			children = (
+				3B60765E2522FB6200712490 /* pushExample.entitlements */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -194,7 +196,6 @@
 				0FE21974A8954BC131391A43 /* Pods-pushExample-tvOSTests.debug.xcconfig */,
 				927A9E83AF6A7FABEF804E7C /* Pods-pushExample-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -655,6 +656,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = pushExample/pushExample.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = pushExample/Info.plist;
@@ -678,6 +680,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = pushExample/pushExample.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = pushExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
