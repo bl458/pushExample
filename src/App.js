@@ -1,24 +1,20 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
-import React from 'react';
-import {SafeAreaView, Text, StatusBar, TouchableOpacity} from 'react-native';
+import React, {useEffect} from 'react';
+import {SafeAreaView, StatusBar, TouchableOpacity} from 'react-native';
 
 import {pushNotifications} from './services';
 
+const pushHelper = new pushNotifications.PushHelper();
+
 const App = () => {
+  useEffect(() => pushHelper.deleteHistory(), []);
+
   return (
     <>
       <StatusBar barStyle="default" />
       <SafeAreaView style={{flex: 1, backgroundColor: 'green'}}>
         <TouchableOpacity
           style={{flex: 1, backgroundColor: 'purple'}}
-          onPress={pushNotifications.LocalNotification}
+          onPress={pushHelper.localNotification}
         />
       </SafeAreaView>
     </>
