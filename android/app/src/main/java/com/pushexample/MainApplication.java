@@ -11,6 +11,8 @@ import com.facebook.soloader.SoLoader;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import com.dieam.reactnativepushnotification.ReactNativePushNotificationPackage;  // <--- Import Package
+import com.facebook.react.shell.MainReactPackage;
+import java.util.Arrays;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -23,13 +25,12 @@ public class MainApplication extends Application implements ReactApplication {
 
         @Override
         protected List<ReactPackage> getPackages() {
-          @SuppressWarnings("UnnecessaryLocalVariable")
-          List<ReactPackage> packages = new PackageList(this).getPackages();
-          // Packages that cannot be autolinked yet can be added manually here, for example:
-          // packages.add(new MyReactNativePackage());
-          return packages;
-        }
 
+        return Arrays.<ReactPackage>asList(
+            new MainReactPackage(),
+            new ReactNativePushNotificationPackage() // <---- Add the Package
+        );
+      }
         @Override
         protected String getJSMainModuleName() {
           return "index";
